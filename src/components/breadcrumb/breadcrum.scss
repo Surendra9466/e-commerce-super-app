@@ -1,0 +1,15 @@
+.breadcrumb-wrapper {
+    min-height: 60px;
+    
+    @screen lg {
+        min-height: 80px;
+    }
+    .breadcrumb {
+        max-width: 1170px;
+        width: 100%;
+        
+        span {
+            color: black;
+        }
+    }
+}
