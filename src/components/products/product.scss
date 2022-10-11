@@ -20,7 +20,15 @@
         color: #324D67;
     }
 
-    .products-wrapper {
+    .view-switch-buttons button{
+        @apply border border-solid border-black w-6 h-6 flex rounded items-center justify-center;
+
+        &.active{
+            @apply text-white bg-black;
+        }
+    }
+
+    .products-wrapper.gridView {
         .product-item {
             width: 100%;
 
@@ -32,8 +40,6 @@
                 max-width: 31%;
             }
         }
-
-
 
         .product-img-wrapper {
             height: 175px;
@@ -81,6 +87,7 @@
         }
 
         .product-details {
+            @apply flex justify-between mt-4 capitalize;
             h5 {
                 color: #102A42;
             }

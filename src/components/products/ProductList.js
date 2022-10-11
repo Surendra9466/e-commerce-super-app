@@ -9,7 +9,7 @@ export default function ProductList({product}) {
                 <img className='product-img' src={image} alt={name} />
                 <div className='search-icon-wrapper cursor-pointer'><img className='search-icon' src={ProductSearch} /></div>
             </div>
-            <div className='product-details flex justify-between mt-4 capitalize'>
+            <div className='product-details'>
                 <h5>{name}</h5>
                 <p className='text-secondary'>${price}</p>
             </div>
