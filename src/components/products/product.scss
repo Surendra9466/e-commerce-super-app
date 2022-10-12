@@ -20,15 +20,17 @@
         color: #324D67;
     }
 
-    .view-switch-buttons button{
+    .view-switch-buttons button {
         @apply border border-solid border-black w-6 h-6 flex rounded items-center justify-center;
 
-        &.active{
+        &.active {
             @apply text-white bg-black;
         }
     }
 
     .products-wrapper.gridView {
+        @apply flex flex-wrap gap-6;
+
         .product-item {
             width: 100%;
 
@@ -64,6 +66,7 @@
                 right: 50%;
                 opacity: 0;
                 transition: opacity 300ms ease-in-out;
+
                 @screen md {
                     max-width: 45%;
                     right: 45%;
@@ -88,9 +91,70 @@
 
         .product-details {
             @apply flex justify-between mt-4 capitalize;
+
             h5 {
                 color: #102A42;
             }
         }
+    }
+
+    .products-wrapper.listView {
+        @apply flex flex-col gap-12;
+        .product-item {
+            @apply flex flex-col md:flex-row md:gap-8;
+        }
+
+        .product-img-wrapper {
+            height: 200px;
+            border-radius: 4px;
+            @apply w-full relative mb-4;
+            
+            @screen md {
+                flex-shrink: 0;
+                max-width: 300px;
+            }
+
+            .product-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+        }
+
+        .product-details {
+            h5 {
+                color: #102A42;
+                @apply mb-2 text-xl capitalize font-semibold;
+            }
+
+            p {
+                @apply mb-3;
+            }
+
+            .description {
+                margin-bottom: 16px;
+                @apply text-sm overflow-hidden;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+            }
+            .detail-btn {
+                @apply bg-secondary text-white uppercase;
+                padding: 4px 8px;
+                font-size: 8px;
+                box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+                cursor: pointer;
+                border-radius: 0.25rem;
+                letter-spacing: 0.1rem;
+                color: #EADED7;
+            }
+
+            .detail-btn:hover {
+                color: #453227;
+                background-color: #C5A491;
+            }
+        }
+
     }
 }

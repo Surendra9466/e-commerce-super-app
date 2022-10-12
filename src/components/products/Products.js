@@ -17,7 +17,6 @@ export default function Products() {
         setProductList(data)
         setLoader(false);
       })
-
   }, [])
 
   function toggleView(e){
@@ -52,9 +51,9 @@ export default function Products() {
                     {productList.length} products found
                   </div>
                 </div>
-                <div className={`products-wrapper ${viewType} flex flex-wrap gap-6`}>
+                <div className={`products-wrapper ${viewType}`}>
                   {productList.map((product, index) => {
-                    return <ProductList key={product.id} product={product} />
+                    return <ProductList key={product.id} product={product} viewType={viewType}/>
                   })}
                 </div>
               </>
