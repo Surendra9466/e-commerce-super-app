@@ -8,6 +8,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import SingleProductPage from './components/singleProduct/SingleProductPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/about-us' element={<About />} />
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/products/:productId' element={<SingleProductPage />} />
         </Routes>
     </div>
   );

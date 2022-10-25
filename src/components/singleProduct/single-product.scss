@@ -1,0 +1,16 @@
+.single-product-wrapper {
+    .product-page-container {
+        margin-top: 50px;
+        padding: 16px;
+        .back-to-product {
+            @apply bg-secondary text-accent text-sm;
+            padding: 6px 12px;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+            border-radius: 0.25rem;
+            letter-spacing: 0.1rem;
+        }
+        .single-product-section {
+            margin-top: 32px;
+        }
+    }
+}

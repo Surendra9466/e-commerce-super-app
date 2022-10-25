@@ -4,32 +4,34 @@ import './product.scss';
 import ProductList from './ProductList';
 import Loader from '../loaderSpinner/Loader';
 // https://course-api.com/react-store-products
+import productData from '../../productData.js';
 export default function Products() {
 
   const [productList, setProductList] = useState([]);
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
   const [viewType, setViewType] = useState('gridView');
 
-  useEffect(() => {
-    fetch('https://course-api.com/react-store-products')
-      .then((res) => res.json())
-      .then((data) => {
-        setProductList(data)
-        setLoader(false);
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch('https://course-api.com/react-store-products')
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProductList(data)
+  //       setLoader(false);
+  //     })
+  // }, [])
 
-  function toggleView(e){
-    if(e.target.closest('button').dataset.type === 'gridView') {
+
+  function toggleView(e) {
+    if (e.target.closest('button').dataset.type === 'gridView') {
       setViewType('gridView');
-    }else {
+    } else {
       setViewType('listView');
     }
   }
 
   return (
     <>
-      <Breadcrumb BreadcrumbValue={'Products'} />
+      {/* <Breadcrumb BreadcrumbValue={'Products'} /> */}
       <main className='product-section md:mt-8 font-poppins'>
         <div className='product-container mx-auto lg:gap-12 flex-col md:flex-row mb-12'>
           <aside className='filter-wrapper'>filter section</aside>
@@ -52,8 +54,8 @@ export default function Products() {
                   </div>
                 </div>
                 <div className={`products-wrapper ${viewType}`}>
-                  {productList.map((product, index) => {
-                    return <ProductList key={product.id} product={product} viewType={viewType}/>
+                  {productData.map((product, index) => {
+                    return <ProductList key={product.id} product={product} viewType={viewType} />
                   })}
                 </div>
               </>

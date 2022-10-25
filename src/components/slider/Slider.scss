@@ -1,0 +1,33 @@
+.slider-wrapper {
+    .hero-img {
+        height: 300px;
+
+        img {
+            height: 100%;
+            width: 100%
+        }
+
+        @screen md {
+            height: 600px;
+        }
+    }
+
+    .img-gallery {
+        @apply grid gap-x-4 w-full mt-4;
+        grid-template-columns: repeat(5, 1fr);
+
+        img {
+            @apply rounded cursor-pointer w-full;
+            height: 50px;
+            object-fit: cover;
+
+            @screen md {
+                height: 100px;
+            }
+        }
+
+        .active {
+            @apply border-secondary border-solid border-2;
+        }
+    }
+}

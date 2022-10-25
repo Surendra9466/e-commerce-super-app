@@ -4,7 +4,7 @@ import Breadcrumb from '../breadcrumb/Breadcrumb'
 export default function ContactUs() {
   return (
     <>
-      <Breadcrumb BreadcrumbValue={'Contact'} />
+      {/* <Breadcrumb BreadcrumbValue={'Contact'} /> */}
       <div>Contact Us</div>
     </>
   )

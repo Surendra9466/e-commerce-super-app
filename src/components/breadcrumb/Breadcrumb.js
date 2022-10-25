@@ -1,13 +1,15 @@
 import React from 'react'
 import './breadcrum.scss'
 import { Link } from 'react-router-dom';
-export default function Breadcrumb({ BreadcrumbValue }) {
+export default function Breadcrumb({ BreadcrumbValue, breadcrumbData }) {
   return (
     <div className='breadcrumb-wrapper bg-accent flex items-center px-4'>
-      <div className='breadcrumb text-secondary text-xl font-semibold mx-auto '>
-        <Link to="/">Home</Link> 
-        <span> / {BreadcrumbValue}</span>
-      </div>
+      {BreadcrumbValue ? <div className='breadcrumb text-secondary text-xl font-semibold mx-auto '>
+        {breadcrumbData.map((item, index) => {
+          return <Link key={index} to={item.path}>{item.name} / </Link>
+        })}
+        <span className='capitalize'>{BreadcrumbValue}</span>
+      </div> : ''}
     </div>
   )
 }
