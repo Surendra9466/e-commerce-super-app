@@ -11,6 +11,7 @@ import {
 import SingleProductPage from './components/singleProduct/SingleProductPage';
 
 function App() {
+  console.log('hello');
   return (
     <div className='app-container'>
       <Header />
