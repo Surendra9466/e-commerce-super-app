@@ -9,19 +9,20 @@ import {
   Route
 } from "react-router-dom";
 import SingleProductPage from './components/singleProduct/SingleProductPage';
+import Footer from './components/footer/Footer';
 
 function App() {
-  console.log('hello');
   return (
     <div className='app-container'>
       <Header />
         <Routes>
           <Route index element={<Home />} />
           <Route path='/about-us' element={<About />} />
-          <Route path='/contact-us' element={<ContactUs />} />
+          {/* <Route path='/contact-us' element={<ContactUs />} /> */}
           <Route path='/products' element={<Products />} />
           <Route path='/products/:productId' element={<SingleProductPage />} />
         </Routes>
+      <Footer />
     </div>
   );
 }

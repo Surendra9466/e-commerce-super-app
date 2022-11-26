@@ -47,16 +47,16 @@ export default function SingleProductPage() {
               <span className='font-bold'>Brand</span>
               <span>{singleProduct.company}</span>
             </p>
-          </section>
-          <section className='add-to-cart'>
-            <div className='colors'>
-              <span className='capitalize font-bold'>colors :</span>
-              <div className='flex'>
-                {singleProduct.colors?.map((color, index) => {
-                  return <Button key={index} color={color} index={index}/>
-                })}
+            <section className='add-to-cart'>
+              <div className='colors'>
+                <span className='capitalize font-bold'>colors :</span>
+                <div className='flex'>
+                  {singleProduct.colors?.map((color, index) => {
+                    return <Button key={index} color={color} index={index} />
+                  })}
+                </div>
               </div>
-            </div>
+            </section>
           </section>
         </div>
       </div>

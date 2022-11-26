@@ -1,8 +1,10 @@
 .single-product-wrapper {
     .product-page-container {
-        margin-top: 50px;
-        padding: 16px;
+        padding: 0 20px;
+        max-width: 1170px;
+        margin: 50px auto;
 
+        
         .back-to-product {
             @apply bg-secondary text-accent text-sm;
             padding: 6px 12px;
@@ -13,6 +15,12 @@
 
         .single-product-section {
             margin-top: 32px;
+            display: grid;
+            gap: 4rem;
+
+            @media (min-width: 940px) {
+                grid-template-columns: 1fr 1fr;
+            }
         }
     }
 
@@ -26,7 +34,7 @@
         }
 
         h5 {
-            font-size: .875rem;
+            font-size: 18px;
         }
 
         .desc {

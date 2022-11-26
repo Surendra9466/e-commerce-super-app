@@ -34,7 +34,7 @@ export default function Products() {
       {/* <Breadcrumb BreadcrumbValue={'Products'} /> */}
       <main className='product-section md:mt-8 font-poppins'>
         <div className='product-container mx-auto lg:gap-12 flex-col md:flex-row mb-12'>
-          <aside className='filter-wrapper'>filter section</aside>
+          {/* <aside className='filter-wrapper'>filter section</aside> */}
 
           <section className='product-item-wrapper flex-1'>
             {loader ? <Loader /> :

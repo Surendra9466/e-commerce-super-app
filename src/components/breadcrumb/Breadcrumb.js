@@ -2,7 +2,6 @@ import React from 'react'
 import './breadcrum.scss'
 import { Link } from 'react-router-dom';
 export default function Breadcrumb({ BreadcrumbValue="", breadcrumbData }) {
-  console.log(breadcrumbData)
   return (
     <div className='breadcrumb-wrapper bg-accent flex items-center px-4'>
       {breadcrumbData.length > 0 ? <div className='breadcrumb text-secondary text-xl font-semibold mx-auto '>
